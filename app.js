@@ -3,15 +3,18 @@ function Student(name, lastName, birthday){
     this.lastName = lastName;
     this.birthday = birthday;
 
-    this.getFullName = function() {
+    this.getInfo = function() {
         console.log(this.name + " " + this.lastName);
     }
 };
 
+var list = [];
 function saving(){
     const name = document.getElementById('firstName').value;
     const lastName = document.getElementById('lastName').value;
     const birthday = document.getElementById('birthday').value;
     var student = new Student(name, lastName, birthday);
-    console.log(student.getFullName());
+    list.push(student);
+    console.log(list);
 };
+
